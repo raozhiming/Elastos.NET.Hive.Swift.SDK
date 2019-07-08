@@ -20,7 +20,7 @@ install:
 script:
   - xcodebuild -showsdks
   - if [ $TARGET == "macOS" ]; then
-      xcodebuild -workspace ElastosHiveSDK.xcworkspace -scheme ElastosHiveSDK_macOS;
+      xcodebuild -workspace ElastosHiveSDK.xcworkspace -scheme ElastosHiveSDK_macOS CODE_SIGNING_REQUIRED=NO;
     else
       if [ $DESTINATION == "iphoneos" ]; then
         xcodebuild -workspace ElastosHiveSDK.xcworkspace -scheme ElastosHiveSDK -configuration Release build;
