@@ -14,10 +14,7 @@ matrix:
 install:
   - sudo gem update --system
   - sudo gem install  -n /usr/local/bin cocoapods
-  - sudo rm -rf ~/.cocoapods/
-  - git clone https://git.coding.Net/CocoaPods/Specs.git ~/.cocoapods/repos/master
-  - pod setup
-  # - pod repo update
+  - pod repo update
   - pod install --verbose --no-repo-update
 
 script:
